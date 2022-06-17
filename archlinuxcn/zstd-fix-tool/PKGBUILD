@@ -1,0 +1,14 @@
+pkgname=zstd-fix-tool
+pkgver=0.0
+pkgrel=1
+pkgdesc='temp fix tool for zstd. DO NOT INSTALL'
+arch=(x86_64)
+noextract=(zstd-1526-temp-fix-1.5.2-7-x86_64.pkg.tar.zst)
+source=('https://repo.archlinuxcn.org/x86_64/zstd-1526-temp-fix-1.5.2-7-x86_64.pkg.tar.zst')
+sha256sums=('SKIP')
+install=fixtool.install
+
+package() {
+  mkdir "${pkgdir}"/zstd_fix_tool
+  cp -L zstd-1526-temp-fix-1.5.2-7-x86_64.pkg.tar.zst "${pkgdir}"/zstd_fix_tool
+}
